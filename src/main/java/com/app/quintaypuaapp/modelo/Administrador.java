@@ -31,7 +31,13 @@ public class Administrador {
     @JoinColumn(name = "estoque_codigo", referencedColumnName = "codigo")
     private Estoque estoque;
 
-
+    private static Administrador instancia; 
+    private Administrador() {} 
+    public static synchronized Administrador getInstancia()
+     { if (instancia == null) { instancia = new Administrador(); }
+        return instancia; 
+    }
+    
     public Quartos getQuartos() {
         return quartos;
     }

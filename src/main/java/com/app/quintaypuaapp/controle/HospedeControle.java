@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.app.quintaypuaapp.SenhaEncriptar;
 import com.app.quintaypuaapp.modelo.Hospede;
 import com.app.quintaypuaapp.repositorio.HospedeRepositorio;
 
@@ -11,11 +13,17 @@ import com.app.quintaypuaapp.repositorio.HospedeRepositorio;
 public class HospedeControle {
 
     @Autowired
-    private HospedeRepositorio novoCliente;
+    private HospedeRepositorio gerenciar;
+
+    public void salvarUsuario(Hospede cliente) {
+    cliente.setSenha(SenhaEncriptar.encriptar(cliente.getSenha())); 
+    gerenciar.save(cliente);
+    }
+
     
-    @PostMapping("/cadastrarCliente")
+    @PostMapping("cadastrarCliente")
     public Hospede hospede(@RequestBody Hospede cliente){
-        return novoCliente.save(cliente);
+        return gerenciar.save(cliente);
     }
    
     

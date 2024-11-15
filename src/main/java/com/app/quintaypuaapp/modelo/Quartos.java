@@ -14,6 +14,7 @@ public class Quartos {
     private double diaria;
     private double pacote;
     private int banheiros;
+    
 
 
     public int getRegistro() {

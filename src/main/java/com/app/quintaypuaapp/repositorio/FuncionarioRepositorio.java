@@ -7,4 +7,7 @@ import com.app.quintaypuaapp.modelo.Funcionario;
 @Repository
 public interface FuncionarioRepositorio extends CrudRepository<Funcionario, Integer>{
 
+    
+    
+
 }

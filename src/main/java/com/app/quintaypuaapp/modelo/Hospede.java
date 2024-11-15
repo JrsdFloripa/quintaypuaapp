@@ -1,5 +1,6 @@
 package com.app.quintaypuaapp.modelo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,10 +16,16 @@ public class Hospede {
     private String email;
     private String telefone;
     private int cpf;
+    @Column(nullable = false, length = 40 )
     private int senha;
     
-
     
+    public int getSenha() {
+        return senha;
+    }
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
     public int getID() {
         return ID;
     }
@@ -49,11 +56,6 @@ public class Hospede {
     public void setCpf(int cpf) {
         this.cpf = cpf;
     }
-    public int getSenha() {
-        return senha;
-    }
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
+    
    
 }

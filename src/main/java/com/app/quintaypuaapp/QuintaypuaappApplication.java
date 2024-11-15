@@ -8,6 +8,9 @@ public class QuintaypuaappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(QuintaypuaappApplication.class, args);
+
+		
+		
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.app.quintaypuaapp.modelo;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,9 +14,6 @@ public class Estoque {
     private int codigo;
     private String produto;
     private double quantidade;
-
-
-
 
 
 

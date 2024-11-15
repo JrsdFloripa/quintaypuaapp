@@ -10,37 +10,36 @@ public class Servicos {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int iD;
-    private boolean cafe;
-    private boolean almoco;
-    private boolean limpeza;
+    private double cafe;
+    private double almoco;
+    private double limpeza;
 
-
+    
     public int getiD() {
         return iD;
     }
     public void setiD(int iD) {
         this.iD = iD;
     }
-    public boolean getCafe() {
+    public double getCafe() {
         return cafe;
     }
-    public void setCafe(boolean cafe) {
+    public void setCafe(double cafe) {
         this.cafe = cafe;
     }
-    public boolean getAlmoco() {
+    public double getAlmoco() {
         return almoco;
     }
-    public void setAlmoco(boolean almoco) {
+    public void setAlmoco(double almoco) {
         this.almoco = almoco;
     }
-    public boolean getLimpeza() {
+    public double getLimpeza() {
         return limpeza;
     }
-    public void setLimpeza(boolean limpeza) {
+    public void setLimpeza(double limpeza) {
         this.limpeza = limpeza;
     }
-
-
+    
 
    
 }
